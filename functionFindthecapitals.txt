@@ -1,0 +1,11 @@
+const capital = function(word) {
+  const arr = word.split("");
+  const arrOrdened = arr.map(function(e, i, a) {
+    if (e === e.toUpperCase()) {
+       return i;
+    }
+  });
+  console.log(arrOrdened);
+};
+
+capital("CodEWaRs");

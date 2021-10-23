@@ -1,0 +1,17 @@
+public class Dinglemouse {
+
+  private String firstName;
+  private String lastName;
+  
+  public Dinglemouse(String firstName, String lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+  
+  public String getFullName() {
+if (firstName.equals("")  && !lastName.equals(""))  return lastName;
+else if (lastName.equals("") && !firstName.equals("")) return firstName;
+else  if (lastName.equals("") && firstName.equals("")) return "";
+      else return firstName + " " + lastName;
+  }
+}

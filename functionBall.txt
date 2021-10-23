@@ -1,0 +1,5 @@
+var Ball = function(ballType) {
+    return { ballType : ballType || "regular" };
+};
+
+document.getElementById('choice').innerHTML = new Ball("super").ballType;

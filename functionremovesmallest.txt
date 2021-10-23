@@ -1,0 +1,10 @@
+function removeSmallest(arr) {
+  const smallest = Math.min(...arr);
+  const index = arr.indexOf(smallest);
+  
+  return arr.filter((_, i) => i !== index);
+}
+
+const result = removeSmallest([2, 1, 5, -10, 4, -10, 2])
+
+console.log(result)

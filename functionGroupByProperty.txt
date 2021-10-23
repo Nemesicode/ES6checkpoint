@@ -1,0 +1,16 @@
+function groupArrayOfObjects(list, key) {
+  return list.reduce(function(rv, x) {
+    (rv[x[key]] = rv[x[key]] || []).push(x);
+    return rv;
+  }, {});
+};
+
+var people = [
+    {sex:"Male", name:"Abdoulaye"},
+    {sex:"Female", name:"Mamadou"},
+    {sex:"Male", name:"Fatou"},
+    {sex:"Female", name:"Harouna"}
+];
+var groupedPeople=groupArrayOfObjects(people,"sex");
+console.log(groupedPeople.Male);//will be the Males 
+console.log(groupedPeople.Female);//will be the Females

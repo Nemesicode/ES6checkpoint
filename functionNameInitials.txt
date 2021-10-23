@@ -1,0 +1,20 @@
+var initials = document.getElementById("initials");
+var fullName = document.getElementById("fullname");
+
+fullName.addEventListener("input", (e) => {
+
+    var names = e.target.value.split(" ");
+    var nameinitials = ""
+
+    if (names.length == 2) {
+       var nameinitials = names[0][0].toUpperCase() + "." + names[1][0].toUpperCase();
+    }
+
+    if (names.length >= 3) {
+       var nameinitials = names[0][0].toUpperCase() + "." + names[1][0].toUpperCase() + "." + names[2][0].toUpperCase();
+    }
+
+    initials.value = nameinitials
+
+});
+

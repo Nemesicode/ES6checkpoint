@@ -1,0 +1,13 @@
+function divisors(integer) {
+  var numb=[];
+  for (var x=2;x<integer;x++){
+  if(integer % x == 0){
+ numb.push(x);
+    } 
+  }
+  if (integer%2!=0){
+    return (integer +' is'+' prime'); 
+      }
+  return numb;
+ 
+}

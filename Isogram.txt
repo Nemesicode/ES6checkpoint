@@ -1,0 +1,36 @@
+function isIsogram(str){
+  
+  console.log( 'string: ' + str );
+
+  var stringLength = str.length;
+  console.log( 'stringLength: ' + stringLength );
+  
+  if ( stringLength == 0 ) {
+    return true;
+  } else {
+     
+    var stringLowercase = str.toLowerCase();
+    console.log( 'stringLowercase: ' + stringLowercase );
+
+    var arrayOfCharacters = stringLowercase.split("");
+    
+    for ( var i = 0; i < stringLength; i++ ) {
+      console.log( 'i: ' + i );
+    
+      var checkChar = arrayOfCharacters[i];
+      console.log( 'checkChar: ' + checkChar );
+    
+      var countChar = arrayOfCharacters.reduce( function( n, val ) {
+        return n + (val === checkChar);
+      }, 0);
+      
+      console.log( 'countChar: ' + countChar );
+      if ( countChar > 1 ) {
+        return false;
+      }
+   
+    return true;
+    
+  }
+
+}
